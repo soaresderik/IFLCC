@@ -1,11 +1,12 @@
-print('------------------')
-print('Calculadora em Lua')
-print('------------------')
-
 local novamente = 's', num1, num2;
 
 while novamente == 's' do
   os.execute('clear')
+  
+  print('------------------')
+  print('Calculadora em Lua')
+  print('------------------')
+
   io.write('Digite o primeiro nº: ')
   num1 = io.read()
   io.write('Digite o segundo nº: ')
