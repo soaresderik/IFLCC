@@ -5,7 +5,7 @@
 int main() {
     int matriz[5][5];
     int i, j;
-    int principal = 0, secundaria = 0;
+    int principal = 0, secundaria = 0, soma = 0;
 		
     /* gerando a matriz */
     printf( "Matriz:\n" );
@@ -19,10 +19,13 @@ int main() {
 
     for( i = 0; i < 5; i++ ) {
         principal += matriz[i][i];
+        for(j = 0; j < 5; j++){
+        	soma += matriz[i][j];
+		}
     }
     
     for (i=0; i<5; i++){
-		for (j=0; j<5; j++){
+		for (j= 0; j<5; j++){
 			if (j == (5 - 1 - i)) {
 				secundaria += matriz[i][j];
 			}
@@ -31,5 +34,6 @@ int main() {
 	
     printf("Soma da diagonal principal: %d", principal);
     printf("\nSoma da diagonal secundaria: %d", secundaria);
+    printf("\nSoma dos elementos: %d", soma);
 
 }
